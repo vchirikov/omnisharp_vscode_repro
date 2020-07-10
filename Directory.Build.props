@@ -1,0 +1,19 @@
+<Project ToolsVersion="latest" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory.TrimEnd('\').TrimEnd('/'))\</SolutionDir>
+    <NoLogo>true</NoLogo>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <OutputPath>$(SolutionDir)artifacts\</OutputPath>
+    <PackageOutputPath>$(SolutionDir)artifacts\nupkg</PackageOutputPath>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <Features>strict;pdb-path-determinism</Features>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <GenerateFullPaths Condition="'$(TERM_PROGRAM)' == 'vscode'">true</GenerateFullPaths>
+  </PropertyGroup>
+</Project>
